@@ -44,12 +44,42 @@ and open the template in the editor.
     </head>
     
     <body>
-        <form class="input" action="Menu Page.html" >
+        <form class="input" >
             <img src="iconcut1.png" class="icon">
             <h3><i class="fa fa-unlock"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h3>
-            <input type="text" name="username" placeholder="เลขทะเบียนนักศึกษา" size="50">
-            <input type="password" name="psw" placeholder="รหัสผ่าน" size="50"><br><br>
-            <a href="#Menu Page.html"><input class="btlogin" type="submit" value="เข้าสู่ระบบ"></a><br><br>
+            <input type="text" id="username" placeholder="เลขทะเบียนนักศึกษา" size="50">
+            <input type="password" id="password" placeholder="รหัสผ่าน" size="50"><br><br>
+            <input class="btlogin" type="submit" onclick="getInfo()" value="เข้าสู่ระบบ"><br><br>
         </form>
     </body>
+    
+    <script>       
+        var people = [
+            {
+                username: "admin",
+                password: "1234"
+            },
+            {
+                username: "user",
+                password: "4321"
+            }
+        ];
+        function getInfo()
+        {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            for(i=0; i<people.length; i++)
+            {
+                if(username == people[i].username && password == people[i].password)
+                {
+                    window.open('Menu Page.html')
+                    window.close();
+                }
+                else
+                {
+                    alert("Incorrect username or password");
+                }
+            }
+        }   
+    </script>
 </html>
