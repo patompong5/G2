@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -65,14 +66,14 @@ and open the template in the editor.
     </head>
     <body>
         <div class="bg">
-            <img src="iconcut1.png">
+            <img style="margin-top:2%" src="iconcut1.png">
         </div>
         
         <div class="w3-sidebar w3-bar-block bg" 
-             style="width:15%; top: 0%; background-attachment: scroll">
-            <img src="profile.jpg" class="profile"><br><br><br><br><br><br><br><br><br><br><br><br>
-             <a href="Menu Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center" >ย้อนกลับ</a><br>
-             <a href="Login Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center" >ออกจากระบบ</a>
+             style="width:15%; top:0%">
+            <img src="profile.jpg" class="profile">
+             <a href="Menu Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center; margin-top: 110%;" >ย้อนกลับ</a>
+             <a href="Login Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center; margin-top: 10%;" >ออกจากระบบ</a>
         </div>
         
         <h2 style="text-align:center">จดทะเบียนรายวิชาล่าช้า</h2><hr><br>
@@ -133,24 +134,35 @@ and open the template in the editor.
 
 <script>
 
-  function myFunction() {
+  function myFunction() 
+  {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
+  for (i = 0; i < tr.length; i++) 
+  {
     td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
+    if (td) 
+    {
       txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      if (txtValue.toUpperCase().indexOf(filter) > -1) 
+      {
         tr[i].style.display = "";
-      } else {
+      } 
+      else 
+      {
         tr[i].style.display = "none";
       }
     }
   }
 }
+   
+   function subjectAccept()
+   {
+       var table, tr, td;
+   }
 </script>
         <form action="Menu Page.html">
             <br><input class="btaccept" type="submit" style="margin-left:20%" value="ยืนยันการลงทะเบียน">
