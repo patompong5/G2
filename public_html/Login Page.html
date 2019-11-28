@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+              href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+                body {
+                      background-image: url(backreg.jpg);
+                      background-repeat: no-repeat;
+                      background-attachment: fixed; 
+                      background-size: 100% 100%;
+                      background-position: center;
+                }
+                .input {
+                        background-color: rgb(255, 145, 0);
+                        width:40%;
+                        height:40%;
+                        padding:3%;
+                        text-align:left;
+                        margin-left:30%;
+                        margin-top:10%;
+                        background-attachment: fixed; 
+                        background-position: center;
+                }  
+                .icon {
+                       text-align: center;
+                       margin-left:5%;
+                       
+                }
+                .btlogin {
+                       background-color: rgb(255, 226, 71);
+                }
+        </style>
+    </head>
+    
+    <body>
+        <form class="input" >
+            <img src="iconcut1.png" class="icon">
+            <h3><i class="fa fa-unlock"></i> เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h3>
+            <input type="text" id="username" placeholder="เลขทะเบียนนักศึกษา" size="50">
+            <input type="password" id="password" placeholder="รหัสผ่าน" size="50"><br><br>
+            <input class="btlogin" type="submit" onclick="getInfo()" value="เข้าสู่ระบบ"><br><br>
+        </form>
+    </body>
+    
+    <script>       
+        var people = [
+            {
+                username: "admin",
+                password: "1234"
+            },
+            {
+                username: "user",
+                password: "4321"
+            }
+        ];
+        function getInfo()
+        {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            for(i=0; i<people.length; i++)
+            {
+                if(username == people[i].username && password == people[i].password)
+                {
+                    window.open('Menu Page.html')
+                    window.close();
+                }
+                else
+                {
+                    alert("Incorrect username or password");
+                }
+            }
+        }   
+    </script>
+</html>
