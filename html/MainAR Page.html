@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>MainAR Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="calendar.css" type="text/css" />
+
+        <style>
+            .profile {
+                width:13%;
+                height:27%;
+                position: fixed;
+                left: 1%;
+                top : 2%;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+            }
+            .bg {
+                background-color: rgb(255, 145, 0);
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                text-align: center;
+            }
+            .btaccept {
+                       background-color: #8cff66;
+            }
+            .reset {
+                       background-color: #ff4d4d;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+            <img style="margin-top:2%" src="iconcut1.png">
+        </div>
+        
+        <div class="w3-sidebar w3-bar-block bg" 
+             style="width:15%; top:0%">
+            <img src="profile.jpg" class="profile">
+             <a href="Menu Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center; margin-top: 110%;" >ย้อนกลับ</a>
+             <a href="Login Page.html" class="w3-bar-item w3-button w3-grey" style="text-align:center; margin-top: 10%;" >ออกจากระบบ</a>
+        </div>
+        
+        <div class="w3-container" style="margin-left:20%;">
+            <div class="w3-content w3-display-container" >
+                 <img src="main.jpg" style="width: 80%; height: 100%">
+            </div>
+        </div>
+        
+        <form action="Main Page.html" style="margin-left:26.6%">
+            <input class="btaccept" type="submit" value="ยอมรับ">
+            <input class="reset" type="reset" value="ยกเลิก" onclick='location.replace("Menu Page.html")'><br><br><br><br><br>
+        </form>
+    
+    </body>
+</html>
